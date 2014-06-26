@@ -1,7 +1,7 @@
 #coding=utf-8
 import sys
-sys.path.append(r"D:\code\appium_python\testcase")
-sys.path.append(r"D:\code\appium_python\testcase\public")
+sys.path.append(r"D:\code\python_appium\testcase")
+sys.path.append(r"D:\code\python_appium\testcase\public")
 import unittest
 import acfun_app
 import HTMLTestRunner
@@ -16,7 +16,7 @@ testunit =  unittest.TestSuite()
 testunit.addTest(unittest.makeSuite(acfun_app.Acfun))
 
 #定义报告存放路径
-filename =  "D:\\code\\appium_python\\report\\"+unicode(now,'utf-8')+"result.html"
+filename =  "D:\\code\\report\\"+unicode(now,'utf-8')+"result.html"
 fp = file(filename, 'wb+')
 
 
