@@ -8,8 +8,8 @@ from appium import webdriver
 # from selenium.webdriver.common.touch_actions import TouchActions
 
 from time import sleep
-sys.path.append(r"D:\code\appium_python\testcase")
-sys.path.append(r"D:\code\appium_python\testcase\public")
+sys.path.append(r"D:\code\python_appium\testcase")
+sys.path.append(r"D:\code\python_appium\testcase\public")
 
 
 #启动模拟器
