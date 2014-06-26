@@ -9,6 +9,7 @@ sys.path.append(r"D:\code\appium_python\testcase\public")
 from selenium import webdriver
 import public
 from time import sleep
+import homepage
 
 
 
@@ -105,7 +106,7 @@ class Acfun(unittest.TestCase):
         el = self.driver.find_element_by_id('tv.acfundanmaku.video:id/weekly_popup')
         self.assertIsNotNone(el)
 
-        def test_random_click(self):
+    def test_random_click(self):
         u'''app娱乐随机点击用例'''
         homepage.yl_random_click(self.driver)
         el = self.driver.find_element_by_id('tv.acfundanmaku.video:id/content_video_info_stows_add')
