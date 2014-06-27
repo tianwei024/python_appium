@@ -10,6 +10,8 @@ from appium import webdriver
 from time import sleep
 sys.path.append(r"D:\code\python_appium\testcase")
 sys.path.append(r"D:\code\python_appium\testcase\public")
+import homepage
+import public
 
 
 #启动模拟器
@@ -142,14 +144,38 @@ sleep(5)
 #
 # print el
 # print el.text
-
-el = driver.find_element_by_id('tv.acfundanmaku.video:id/main_pager_tab_more')
+#
+# el = driver.find_element_by_id('tv.acfundanmaku.video:id/main_pager_tab_more')
 # el = driver.find_element_by_name(u'更多')
-el.click()
+# el = driver.find_elements_by_class_name('android.widget.RadioButton')
+# print len(el)
+# el[1].click()
 
 # self.assertEqual(u'更多', el.text)
 
+#登陆
+public.login(driver)
+sleep(3)
+#返回到排行
+homepage.ph_click(driver)
+#点击排行按钮
+driver.find_element_by_id('tv.acfundanmaku.video:id/rank_popup').click()
+sleep(2)
+#选文章排行
+el = driver.find_elements_by_class_name('android.widget.LinearLayout')
+el[8].click()
+sleep(2)
+#点击文章
+ele = driver.find_elements_by_class_name('android.widget.LinearLayout')
+ele[0].click()
+#收藏
+homepage.wz_sc(driver).click()
+sleep(2)
+# #断言 收藏成功判断已收藏元素是否为空
+# el = driver.find_element_by_name(u'取消收藏')
+# el = driver.find_elements_by_class_name('android.widget.TextView')
 
-
+el = driver.find_element_by_name(u'取消收藏')
+el.click()
 
 print 'script ok'

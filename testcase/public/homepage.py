@@ -17,6 +17,8 @@ def pd_click(driver):
 def ph_click(driver):
 	ph = driver.find_element_by_id('tv.acfundanmaku.video:id/main_pager_tab_rank')
 	ph.click()
+    # el = driver.find_elements_by_class_name('android.widget.RadioButton')
+    # el[1].click()
 
 #追剧点击
 def zj_click(driver):
@@ -117,9 +119,58 @@ def kjs_click(driver):
 	el = driver.find_element_by_id('tv.acfundanmaku.video:id/home_channel')
 	el.click()
 
+#随机点击科技
 def kj_random_click(driver):
 	public.swipe_screen_down(driver,'tv.acfundanmaku.video:id/home_channel',y=-561)
 	sleep(5)
 	driver.find_element_by_id('tv.acfundanmaku.video:id/home_cover' + str(random.randint(1,4))).click()
+
+
+#视频播放页面收藏元素
+def play_sc(driver):
+    el = driver.find_element_by_id('tv.acfundanmaku.video:id/content_video_info_stows_add')
+    return el
+
+#视频播放页面评论元素
+def play_pl(driver):
+    el = driver.find_element_by_id('tv.acfundanmaku.video:id/content_video_info_comment')
+    return el
+
+#视频播放页面视频播放元素
+def play_sp(driver):
+    el = driver.find_element_by_id('tv.acfundanmaku.video:id/content_video_info_title')
+    return el
+
+#评论页面的评论元素
+def pl_pl(driver):
+    el = driver.find_element_by_name(u'评论')
+    return el
+
+#各页面排序按钮元素
+def px(driver):
+    el = driver.find_element_by_name(u'排序')
+    return el
+
+
+#文章页面漫画模式元素
+def wz_mhms(driver):
+    el = driver.find_element_by_id('tv.acfundanmaku.video:id/content_article_info_comicmode')
+    return el
+
+#文章页面评论元素
+def wz_pl(driver):
+    el = driver.find_element_by_id('tv.acfundanmaku.video:id/content_article_info_comment')
+    return el
+
+#文章页面收藏元素
+def wz_sc(driver):
+    el =driver.find_element_by_name(u'添加收藏')
+    return el
+
+#文章页面分享文章元素
+def wz_fx(driver):
+    el = driver.find_element_by_name(u'分享文章')
+    return el
+
 
 

@@ -83,13 +83,13 @@ class Acfun(unittest.TestCase):
     def test_search(self):
         u"""app搜索用例"""
         public.search(self.driver,'1217843')
-    
+
     def test_homepage_pd(self):
         u"""app频道元素用例"""
         pd = self.driver.find_element_by_id('tv.acfundanmaku.video:id/main_pager_tab_home')
         print pd.text
         self.assertEqual(u'频道', pd.text)
-    
+
     def test_homepage_ph(self):
         u'''app排行点击用例'''
         ph = self.driver.find_element_by_id('tv.acfundanmaku.video:id/main_pager_tab_rank')
@@ -97,7 +97,7 @@ class Acfun(unittest.TestCase):
         el = self.driver.find_element_by_id('tv.acfundanmaku.video:id/rank_popup')
         sleep(2)
         self.assertIsNotNone(el)
-    
+
     def test_homepage_zj(self):
         u''' app追剧点击用例'''
         zj = self.driver.find_element_by_id('tv.acfundanmaku.video:id/main_pager_tab_drama')
@@ -182,6 +182,7 @@ class Acfun(unittest.TestCase):
         sleep(2)
         # #断言 收藏成功判断已收藏元素是否为空
         el = self.driver.find_element_by_name(u'取消收藏')
+        # el[0] = self.driver.find_elements_by_class_name('android.widget.TextView')
         self.assertIsNotNone(el)
 
 
