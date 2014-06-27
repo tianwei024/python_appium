@@ -20,7 +20,7 @@ PATH = lambda p: os.path.abspath(
 
 class Acfun(unittest.TestCase):
     def setUp(self):
-        SYSTEM_VERSION = 4.2
+        SYSTEM_VERSION = 4.1
         
 
         if SYSTEM_VERSION != 4.2:
